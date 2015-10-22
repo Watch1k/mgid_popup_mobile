@@ -14,6 +14,12 @@ $(document).ready(function(){
 			}
 		});
 	}
+	// hide select-options on outer click
+	$(document).click(function(e) {
+		if ($(e.target).closest('.mgidMob_PopupInner').length === 0) {
+			$('.mgidMob_PopupElement').hide();
+		}
+	});
 	// close button
 	$('.mgidMob_closePopup').on('click', function(){
 		$(this).parents('.mgidMob_PopupElement').hide();
