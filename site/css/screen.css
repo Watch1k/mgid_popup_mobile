@@ -239,7 +239,8 @@ body {
       background-color: #db0005; }
 
 .mgidMob_Popup-info {
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-size: 12px; }
   .mgidMob_Popup-info:after {
     content: "";
     display: table;
@@ -248,7 +249,6 @@ body {
     padding: 0 15px; }
   .mgidMob_Popup-info a {
     float: left;
-    font-size: 14px;
     line-height: 1;
     text-decoration: none;
     border-bottom: 1px solid #696969; }
