@@ -1,0 +1,276 @@
+// fonts
+$default-fonts: Arial, sans-serif
+
+// colors
+
+
+/*-------------------------------------------------------------------------*/
+/*----------------------------- MAIN STYLES -------------------------------*/
+/*-------------------------------------------------------------------------*/
+a:hover, a:focus
+	text-decoration: none
+a
+	color: inherit
+svg
+	width: 100%
+	height: 100%
+body
+	min-width: 320px
+	font-family: $default-fonts
+	font-size: 14px
+	line-height: 1.5
+.wrapper
+	overflow: hidden
+	min-height: 100%
+	// padding-bottom: 371px
+.footer
+	// margin-top: -371px
+.mgidMob_PopupElement
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0px
+	left: 0px
+	font-family: "PTSans", $default-fonts
+	font-size: 16px
+	color: #696969
+	line-height: 1.3
+	z-index: 999
+	// display: none
+.mgidMob_PopupShadow
+	position: absolute
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background-color: #000
+	opacity: 0.4
+	z-index: 1
+.mgidMob_PopupInner
+	position: relative
+	margin: 25px auto
+	padding: 5px
+	width: 300px
+	background-color: #f8f8f8
+	z-index: 2
+.mgidMob_closePopup
+	position: absolute
+	overflow: hidden
+	top: 5px
+	right: 5px
+	height: 21px
+	width: 21px
+	text-indent: -9999px
+	background: url("../img/close-icon.png") no-repeat center center
+	background-color: transparent
+	&:hover
+		background-color: darken(#f8f8f8,10)
+.mgidMob_PopupHeader
+	position: relative
+	margin-bottom: 20px
+	+pie-clearfix
+	.mgidMob__logo
+		position: relative
+		z-index: 5
+		display: block
+		overflow: hidden
+		margin: 10px auto 0
+		width: 94px
+		height: 50px
+		a
+			display: block
+			width: 100%
+			height: 100%
+			img
+				width: 100%
+				height: 100%
+		+ p
+			padding: 10px 15px 0
+			text-align: center
+	.mgidMob_Popup-title
+		margin-top: 10px
+		font-size: 26px
+		color: #c20509
+		font-weight: bold
+		text-transform: uppercase
+		text-align: center
+.mgidMob_PopupContent
+	padding-bottom: 15px
+	border: 1px solid #d9d9d9
+	background-color: #fff
+	.mgidMob_tabsPopup
+		position: relative
+		top: -1px
+		+pie-clearfix
+		li
+			position: relative
+			float: left
+			width: 50%
+			font-size: 26px
+			color: #c20509
+			font-weight: bold
+			text-align: center
+			border-top: 2px solid transparent
+			border-bottom: 1px solid #d9d9d9
+			&:hover
+				background-color: lighten(#d9d9d9,10)
+				&:before
+					position: absolute
+					left: 0
+					top: -2px
+					display: block
+					content: ""
+					width: 100%
+					height: 1px
+					background-color: #d9d9d9
+			&.is-active
+				border-top: 2px solid #c20509
+				border-bottom: 1px solid transparent
+				&:hover
+					&:before
+						content: none
+			a
+				display: block
+				padding: 9px 0 11px
+				width: 100%
+				text-decoration: none
+			+ li
+				color: #2b397b
+				border-top: 2px solid transparent
+				border-left: 1px solid #d9d9d9
+				&.is-active
+					border-top: 2px solid #2b397b
+.mgidMob_tabsPopup-panel
+	display: none
+	padding: 20px 10px 0
+	font-family: "Myriad Pro", $default-fonts
+	text-align: center
+	&.is-active
+		display: block
+	p
+		font-weight: bold
+		text-transform: uppercase
+		+ p
+			margin-top: 10px
+			font-size: 14px
+			text-transform: none
+			font-weight: normal
+	.mgidMob_Popup-btn
+		display: block
+		margin: 25px auto 0
+		padding: 10px 0
+		font-family: "Myriad Pro", $default-fonts
+		font-size: 16px
+		color: #fff
+		text-decoration: none
+		background-color: #c20509
+		&:hover
+			background-color: #db0005
+.mgidMob_Popup-info
+	margin-top: 20px
+	+pie-clearfix
+	&.mgidMob-fix
+		padding: 0 15px
+	a
+		float: left
+		font-size: 14px
+		line-height: 1
+		text-decoration: none
+		border-bottom: 1px solid #696969
+		&:hover
+			border-bottom: 1px solid transparent
+		+ a
+			float: right
+/* popup Form */
+.form_field
+	margin-top: 30px
+	padding: 0 15px
+	font-size: 12px
+	+pie-clearfix
+	+ .form_field
+		margin-top: 15px
+	label
+		float: left
+		line-height: 26px
+		cursor: text
+	&.form_field-half
+		input[type="text"]
+			width: 48.5%
+			float: left
+			+ input[type="text"]
+				float: right
+	input[type="text"]
+		background-color: #fff
+		border-top: 1px solid #d3d3d3
+		border-left: 1px solid #d3d3d3
+		border-right: 1px solid #f8f8f8
+		border-bottom: 1px solid #f8f8f8
+		background-color: #f8f8f8
+		font-size: 12px
+		height: 27px
+		line-height: 27px
+		padding: 0 10px
+		width: 100%
+		color: #666
+		-webkit-appearance: none
+		-moz-appearance: none
+		-moz-border-radius: 0px
+		-webkit-border-radius: 0px
+		border-radius: 0px
+		+placeholder-color(#666)
+	.mgidMob_form-btn
+		display: block
+		margin: 30px auto 0
+		width: 100%
+		padding: 10px 15px
+		font-size: 20px
+		color: #fff
+		background-color: #c20509
+		&:hover
+			background-color: #db0005
+/* mgidMob_custom-select */
+.mgidMob_select-wrap
+	cursor: pointer
+	position: relative
+	width: 205px
+	float: right
+	text-decoration: none
+.mgidMob_select-item
+	cursor: pointer
+	padding-left: 7px
+	padding-right: 25px
+	border-top: 1px solid #d3d3d3
+	border-left: 1px solid #d3d3d3
+	border-right: 1px solid #d3d3d3
+	color: #555555
+	background-color: #f8f8f8
+	height: 27px
+	line-height: 27px
+	.mgidMob_select-icon
+		position: absolute
+		top: 0
+		right: 0
+		height: 27px
+		width: 22px
+		border: 1px solid #d3d3d3
+		text-indent: -9999px
+		overflow: hidden
+		display: block
+		background: url("../img/select-arrow.png") no-repeat scroll 4px 10px transparent
+	&:hover
+		.mgidMob_select-icon
+			background-color: #f2f2f2
+.mgidMob_select-list
+	display: none
+	position: absolute
+	top: 100%
+	margin-top: -1px
+	width: 100%
+	border: 1px solid #d3d3d3
+	background-color: #fff
+	li
+		padding: 0 10px
+		height: 24px
+		line-height: 24px
+		&:hover, &.is-active
+			background-color: #f8f8f8
