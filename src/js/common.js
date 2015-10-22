@@ -13,17 +13,23 @@ $(document).ready(function(){
 				$('.mgidMob_PopupContent').find(_linkChosen).addClass('is-active');
 			}
 		});
+		// hide select-options on outer click
+		$(document).click(function(e) {
+			if ($(e.target).closest('.mgidMob_PopupInner').length === 0) {
+				$('.mgidMob_PopupElement').hide();
+			}
+		});
+		// fix iOS
+			$(document).on('touchstart', function(e) {
+				if ($(e.target).closest('.mgidMob_PopupInner').length === 0) {
+					$('.mgid_PopupElement').hide();
+				}
+			});
+		// close button
+		$('.mgidMob_closePopup').on('click', function(){
+			$(this).parents('.mgidMob_PopupElement').hide();
+		});
 	}
-	// hide select-options on outer click
-	$(document).click(function(e) {
-		if ($(e.target).closest('.mgidMob_PopupInner').length === 0) {
-			$('.mgidMob_PopupElement').hide();
-		}
-	});
-	// close button
-	$('.mgidMob_closePopup').on('click', function(){
-		$(this).parents('.mgidMob_PopupElement').hide();
-	});
 
 // mgid custom select
 	if ($('.mgidMob_select').length) {
