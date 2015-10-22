@@ -112,7 +112,7 @@ body {
   position: relative;
   margin: 25px auto;
   padding: 5px;
-  width: 300px;
+  width: 310px;
   background-color: #f8f8f8;
   z-index: 2; }
 
@@ -219,11 +219,11 @@ body {
   .mgidMob_tabsPopup-panel.is-active {
     display: block; }
   .mgidMob_tabsPopup-panel p {
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase; }
     .mgidMob_tabsPopup-panel p + p {
       margin-top: 10px;
-      font-size: 14px;
       text-transform: none;
       font-weight: normal; }
   .mgidMob_tabsPopup-panel .mgidMob_Popup-btn {
